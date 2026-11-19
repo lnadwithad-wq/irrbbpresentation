@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e8ecef">
+  <title>Fairy Bank</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Princess+Sofia&display=swap">
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div id="world" aria-hidden="true">
+    <img id="background" class="backdrop-image" alt="" hidden>
+    <div id="sky"></div>
+
+    <div id="bankFloat" hidden>
+      <div id="bankStack">
+        <span id="bankFallback">TQB</span>
+        <img id="bankExterior" alt="" hidden>
+        <img id="bankInterior" alt="" hidden>
+        <div id="lensRing" hidden></div>
+      </div>
+    </div>
+
+    <div id="homeFairies" hidden></div>
+  </div>
+
+  <main id="stage">
+    <section id="welcome" class="glass">
+      <div id="welcomeFairies" aria-hidden="true"></div>
+      <div class="wordmark">Fairy Bank</div>
+      <h1>Welcome!</h1>
+      <p>Let’s build a bank.</p>
+
+      <form id="nameForm">
+        <label for="bankName">Choose the name of your bank</label>
+        <img id="nameArt" alt="" hidden>
+        <input id="bankName" autocomplete="off" spellcheck="false" maxlength="24">
+        <button id="welcomeNext" type="submit" class="pink" hidden>Next</button>
+      </form>
+    </section>
+  </main>
+
+  <nav id="dock" class="glass" aria-label="Bank applications" hidden></nav>
+
+  <dialog id="panel" class="glass" aria-labelledby="title">
+    <header class="titlebar">
+      <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+      <h2 id="title"></h2>
+      <div id="fairyTray" class="fairy-tray" aria-label="Fairy helps remaining"></div>
+      <div id="windowTools"></div>
+    </header>
+
+    <p id="subtitle"></p>
+    <div id="content"></div>
+
+    <footer>
+      <span id="status" role="status"></span>
+      <div id="actions"></div>
+    </footer>
+  </dialog>
+
+  <dialog id="promptBox" aria-labelledby="promptTitle">
+    <h3 id="promptTitle"></h3>
+    <p id="promptText"></p>
+    <button id="promptClose" type="button">OK</button>
+  </dialog>
+</body>
+</html>
